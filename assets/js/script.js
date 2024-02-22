@@ -1,6 +1,7 @@
 const iframe = document.getElementsByTagName("iframe"); //se trae los ifraem donde se mostraran los videos
 const boton = document.querySelector("btn");
 
+let id = "";
 
 class Multimedia{
     constructor(url){
@@ -55,4 +56,13 @@ boton.addEventListener("click", () => {
         id = "series"
         serie.playMultimedia();
     }}
+)
+
+let modulo = (() => {              //modulo IIFE
+    //Funcion privada
+    let agregarPrivado = (url,id) => {
+        const seleccion = document.getElementById(id);
+        seleccion.setAttribute("src", url);
+    }
+}
 )
