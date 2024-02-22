@@ -9,8 +9,9 @@ class Multimedia{
     set url(url){
         this._url = url
     }
-    set inicio(valor) {
-        
+    setInicio(valor) {
+        console.log(valor)
+        return
     }
 }
 
@@ -25,5 +26,12 @@ class Reproductor extends Multimedia(url, id){
     set id(id){
         this._id = id
     }
-    
+    playMultimedia() { 
+        console.log(`funcion`)
+    }
+    setInicio() {
+        //condicion dada en requerimientos
+        this.id.setAtribute("src", this.url)
+        return
+    }
 }
