@@ -1,3 +1,5 @@
+const iframe = document.getElementsByTagName("iframe"); //se trae los ifraem donde se mostraran los videos
+
 class Multimedia{
     constructor(url){
         this.url = url;
@@ -10,7 +12,7 @@ class Multimedia{
         this._url = url
     }
     setInicio(valor) {
-        console.log(valor)
+        console.log(`Este método es para realizar un cambio en la URL del video`)
         return
     }
 }
@@ -31,7 +33,7 @@ class Reproductor extends Multimedia(url, id){
     }
     setInicio() {
         //condicion dada en requerimientos
-        this.id.setAtribute("src", this.url)
-        return
+        this.id.setAtribute("src", this.url)?start=${tiempo}
+        
     }
 }
