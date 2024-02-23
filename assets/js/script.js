@@ -60,9 +60,14 @@ boton.addEventListener("click", () => {
 
 let modulo = (() => {              //modulo IIFE
     //Funcion privada
-    let agregarPrivado = (url,id) => {
+    let agregarPrivado = (url, id) => {
         const seleccion = document.getElementById(id);
         seleccion.setAttribute("src", url);
     }
+    return {                                //Funcion publica
+        agregarPublico: (url, id) => {
+            agregarPrivado(url, id);
+        }
+    }
 }
-)
+)()
