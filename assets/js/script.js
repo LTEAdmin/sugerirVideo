@@ -56,7 +56,8 @@ class Reproductor extends Multimedia {
     modulo.agregarPublico(this.url, this.id);
   }
   setInicio() {
-    //condicion dada en requerimientos
+      //condicion dada en requerimientos
+      let tiempo=adelantar.value;
     this.id.setAtribute("src", `${this.url}?start=${tiempo}`);
   }
 }
